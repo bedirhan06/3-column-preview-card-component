@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 65%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 375px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}
+
+.container .section {
+  display: flex;
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--very-light-gray);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.description {
+  color: var(--transparent-white);
+  line-height: 1.7;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 60px;
+  padding-block: 40px;
+  row-gap: 40px;
+}
+
+.section.section--sedan {
+  background-color: var(--bright-orange);
+}
+
+.section.section--suvs {
+  background-color: var(--dark-cyan);
+}
+
+.section.section--luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 135px;
+  border: 0;
+  border-radius: 25px;
+  padding-block: 20px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: 3px solid transparent;
+}
+
+.button:hover {
+  border: 3px solid var(--transparent-white);
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+
+.section.section--sedan .button {
+  color: var(--bright-orange);
+}
+
+.section.section--sedan .button:hover {
+  background-color: var(--bright-orange);
+  color: var(--transparent-white);
+}
+
+.section.section--suvs .button {
+  color: var(--dark-cyan);
+}
+
+.section.section--suvs .button:hover {
+  background-color: var(--dark-cyan);
+  color: var(--transparent-white);
+}
+
+.section.section--luxury .button {
+  color: var(--very-dark-cyan);
+}
+
+.section.section--luxury .button:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--transparent-white);
+}
